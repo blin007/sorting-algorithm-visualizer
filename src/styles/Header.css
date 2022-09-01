@@ -6,7 +6,8 @@
     top: 0;
     height: 50px;
     z-index: 1;
-    background-color: rgb(19, 24, 69);
+    background: linear-gradient(to right, rgb(69, 73, 153), rgb(19, 24, 69) 40%);
+    /* background-color: rgb(19, 24, 69); */
 }
 
 .header_link {
@@ -14,9 +15,15 @@
 }
 
 .header_title {
+    display: flex;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header_titleName {
     margin-left: 20px;
     width: 100%;
-    color: white;
     border-radius: 12px;
     padding: 4px 10px 4px 10px;
     /* border: 1px solid white; */
@@ -39,5 +46,5 @@
 .sort_name {
     border-radius: 12px;
     padding: 4px 10px 4px 10px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
