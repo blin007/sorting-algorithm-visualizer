@@ -1,0 +1,15 @@
+.bars {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bars_container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.bar {
+    width: 5px;
+    border: 1px solid red;
+}
