@@ -29,6 +29,11 @@ const Bars = ({ size, sortingAlgo, setSortingComplete, setSortingInProgress }) =
       //eslint-disable-next-line
     }, [sortingAlgo])
 
+    //render each time the bars change due to sorting
+    useEffect(() => {
+
+    }, [bars])
+
   return (
     <div className="bars">
         <div className="bars_container">
