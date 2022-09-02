@@ -7,15 +7,24 @@ const Bars = ({ size, sortingAlgo }) => {
 
     //randomize bars on initial load
     useEffect(() => {
-        setBars(Array.from({length: size}, () => randomRange(700)))
+        setBars(Array.from({length: size}, () => {
+          return {
+            height: randomRange(700),
+            sorted: false,
+          }
+        }))
         //eslint-disable-next-line
-    }, [])
+    }, [size])
 
   return (
     <div className="bars">
         <div className="bars_container">
           {bars.map((item, i) => (
-            <div className="bar" style={{ height: item }}></div>
+            <div className="bar" style={{ 
+              height: item.height, 
+              backgroundColor: item.sorted ? "green" : "red",
+              // width: Math.floor(size* 0.15)
+            }} />
           ))}
         </div>
     </div>

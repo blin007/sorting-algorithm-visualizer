@@ -1,7 +1,6 @@
 import './styles/App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Header from './components/Header';
-import Home from './pages/Home/Home';
+import Home from './components/Home';
 import headerVariants from './animations/headerVariants';
 
 function App() {
@@ -9,7 +8,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={[<Header linkVariants={headerVariants}/>, <Home />]}/>
+          <Route path="/" element={[<Home headerVariants={headerVariants}/>]}/>
         </Routes>
       </div>
     </Router>
