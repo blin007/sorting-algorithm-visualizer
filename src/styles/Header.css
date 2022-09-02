@@ -1,5 +1,6 @@
 .header {
-    position: sticky;
+    /* position: sticky; */
+    flex: 0 1 auto;
     display: flex;
     align-items: center;
     border: 1px solid;
@@ -22,12 +23,12 @@
     color: white;
     margin-left: 10px;
     margin-right: 10px;
-    width: 40%;
+    width: 100%;
 }
 
 .header_titleName {
     margin-left: 20px;
-    width: 100%;
+    /* width: 100%; */
     border-radius: 12px;
     padding: 4px 10px 4px 10px;
 }
@@ -39,10 +40,6 @@
     width: 60%;
     margin-right: 20px;
     margin-left: auto;
-}
-
-.slider {
-    min-width: 50%;
 }
 
 .sort_option {

@@ -1,0 +1,11 @@
+.home {
+    max-width: 800px;
+    margin: 100px auto 40px;   
+    text-align: center;
+    height: 100vh;
+}
+
+.home > h2 {
+    font-size: 2em;
+    color: #fff;
+}

@@ -1,14 +1,22 @@
 import './styles/App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Home from './components/Home';
+
+//import animations
 import headerVariants from './animations/headerVariants';
+import homeVariants from './animations/homeVariants';
+
+//import components / pages
+import Header from './components/Header';
+import Home from './pages/Home/Home';
+import Merge from './pages/MergeSort/Merge';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={[<Home headerVariants={headerVariants}/>]}/>
+          <Route path="/" element={[<Header headerVariants={headerVariants}/>, <Home homeVariants={homeVariants}/>]}/>
+          <Route path="/:sortingAlgorithm" element={[<Merge headerVariants={headerVariants} />]} />
         </Routes>
       </div>
     </Router>

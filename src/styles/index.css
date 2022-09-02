@@ -1,6 +1,10 @@
 body {
   margin: 0;
-  background-color: rgb(233, 233, 233);
+  padding: 0;
+  /* background-color: rgb(233, 233, 233); */
+  background: rgb(21, 21, 85);
+  background: radial-gradient(rgb(105, 132, 194), rgb(48, 48, 102));
+  overflow: hidden;
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
