@@ -4,8 +4,10 @@
     align-items: center;
     border: 1px solid;
     top: 0;
-    height: 50px;
+    height: 7vh;
+    max-height: 25vh;
     z-index: 1;
+    width: 100%;
     background: linear-gradient(to right, rgb(69, 73, 153), rgb(19, 24, 69) 40%);
 }
 
@@ -15,9 +17,12 @@
 
 .header_title {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     color: white;
     margin-left: 10px;
     margin-right: 10px;
+    width: 40%;
 }
 
 .header_titleName {
@@ -30,32 +35,24 @@
 .header_nav {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    width: 60%;
     margin-right: 20px;
     margin-left: auto;
 }
 
-.slider_size {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .slider {
-    margin-top: 6px;
-    margin-right: 50px;
-    min-width: 100%;
-    width: 250px;
+    min-width: 50%;
 }
 
 .sort_option {
     display: flex;
     color: white;
-    margin-left: 10px;
+    margin-left: 5px;
     margin-right: 10px;
 }
 
 .sort_name {
     border-radius: 12px;
     padding: 4px 10px 4px 10px;
-    /* border: 1px solid white; */
 }

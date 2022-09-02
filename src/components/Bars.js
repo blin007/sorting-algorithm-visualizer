@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react'
 import randomRange from '../utility/randomRange';
 import '../styles/Bars.css'
 
-const Bars = ({ size, sortingAlgo }) => {
+const Bars = ({ size, sortingAlgo, setSortingComplete, setSortingInProgress }) => {
     const [bars, setBars] = useState([]);
+    // const [sortingComplete, setSortingComplete] = useState(false);
 
-    //randomize bars on initial load
+    //randomize bars each time size of arrays change
     useEffect(() => {
         setBars(Array.from({length: size}, () => {
           return {
@@ -15,6 +16,18 @@ const Bars = ({ size, sortingAlgo }) => {
         }))
         //eslint-disable-next-line
     }, [size])
+
+    //render for sorting algo
+    useEffect(() => {
+      setSortingComplete(false)
+      setSortingInProgress(true)
+
+      //run sorting algo
+
+      setSortingComplete(true);
+      setSortingInProgress(false);
+      //eslint-disable-next-line
+    }, [sortingAlgo])
 
   return (
     <div className="bars">

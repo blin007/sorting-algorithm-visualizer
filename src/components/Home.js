@@ -5,6 +5,9 @@ import Bars from './Bars'
 
 const Home = ({ headerVariants }) => {
     const [barSize, setBarSize] = useState(100);
+    const [sortingAlgorithm, setSortingAlgorithm] = useState("");
+    const [sortingComplete, setSortingComplete] = useState(false);
+    const [sortingInProgress, setSortingInProgress] = useState(false);
 
     const handleInput = (e) => {
         console.log('e: ', e);
@@ -22,9 +25,7 @@ const Home = ({ headerVariants }) => {
                 >
                     Sorting Algorithm Visualizer
                 </motion.span>
-            </div>
 
-            <div className="slider_size">
                 <input 
                     className="slider"
                     type="range"
@@ -42,6 +43,11 @@ const Home = ({ headerVariants }) => {
                         variants={headerVariants}
                         whileHover={headerVariants.hover}
                         whileTap={headerVariants.tap}
+                        onClick={() => setSortingAlgorithm("insertion")}
+                        style={{
+                            pointerEvents: sortingInProgress ? "none" : "auto", 
+                            color: sortingInProgress ? "gray" : "white",
+                        }}
                     >
                         Insertion Sort
                     </motion.span>
@@ -52,6 +58,11 @@ const Home = ({ headerVariants }) => {
                         variants={headerVariants}
                         whileHover={headerVariants.hover}
                         whileTap={headerVariants.tap}
+                        onClick={() => setSortingAlgorithm("merge")}
+                        style={{
+                            pointerEvents: sortingInProgress ? "none" : "auto",
+                            color: sortingInProgress ? "gray" : "white",
+                        }}
                     >
                         Merge Sort
                     </motion.span>
@@ -62,6 +73,11 @@ const Home = ({ headerVariants }) => {
                         variants={headerVariants}
                         whileHover={headerVariants.hover}
                         whileTap={headerVariants.tap}
+                        onClick={() => setSortingAlgorithm("quick")}
+                        style={{
+                            pointerEvents: sortingInProgress ? "none" : "auto",
+                            color: sortingInProgress ? "gray" : "white",
+                        }}
                     >
                         Quick Sort
                     </motion.span>
@@ -72,6 +88,11 @@ const Home = ({ headerVariants }) => {
                         variants={headerVariants}
                         whileHover={headerVariants.hover}
                         whileTap={headerVariants.tap}
+                        onClick={() => setSortingAlgorithm("bubble")}
+                        style={{
+                            pointerEvents: sortingInProgress ? "none" : "auto",
+                            color: sortingInProgress ? "gray" : "white",
+                        }}
                     >
                         Bubble Sort
                     </motion.span>
@@ -82,6 +103,11 @@ const Home = ({ headerVariants }) => {
                         variants={headerVariants}
                         whileHover={headerVariants.hover}
                         whileTap={headerVariants.tap}
+                        onClick={() => setSortingAlgorithm("selection")}
+                        style={{
+                            pointerEvents: sortingInProgress ? "none" : "auto",
+                            color: sortingInProgress ? "gray" : "white",
+                        }}
                     >
                         Selection Sort
                     </motion.span>
@@ -91,7 +117,12 @@ const Home = ({ headerVariants }) => {
 
 
         <div className="home">
-            <Bars size={barSize}/>
+            <Bars 
+                size={barSize} 
+                sortingAlgo={sortingAlgorithm} 
+                setSortingComplete={setSortingComplete} 
+                setSortingInProgress={setSortingInProgress}
+            />
         </div>
     </>
 
