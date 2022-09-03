@@ -1,20 +1,14 @@
 import React, { useState } from 'react'
 import '../styles/Header.css'
 import { motion } from 'framer-motion'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { MdNavigateBefore } from "react-icons/md";
 
-const HeaderSort = ({ headerVariants, setBarSize, sortingInProgress, setSortingInProgress, play }) => {
-    const params = useParams();
-
-    const stop = () => {
-        setSortingInProgress(false);
-    }
+const HeaderSort = ({ headerVariants, setBarSize, sortingAlgo, play }) => {
+    const [disable, setDisable] = useState(false);
 
     const handleInput = (e) => {
-        // console.log('e: ', e);
         setBarSize(Number(e.target.value))
-        console.log("sorting algorithm from path param: ", params.sortingAlgorithm)
     }
 
   return (
@@ -31,7 +25,7 @@ const HeaderSort = ({ headerVariants, setBarSize, sortingInProgress, setSortingI
                 </motion.div>
             </Link>
             <div className="sort_title">
-                <h2>{params.sortingAlgorithm.toUpperCase()} SORT</h2>
+                <h2>{sortingAlgo.toUpperCase()} SORT</h2>
             </div>
 
             <div className="header_sort_nav">
@@ -42,37 +36,25 @@ const HeaderSort = ({ headerVariants, setBarSize, sortingInProgress, setSortingI
                     max="200"
                     step="25"
                     onInput={e => handleInput(e)}
-                    disabled = {sortingInProgress ? true : false}
+                    disabled = {disable ? true : false}
                 />
-                <div className="sort_option">
-                    <motion.span 
-                        className="sort_name"
+                <div 
+                    className="sort_option"
+                    onClick={play}
+                >
+                    <motion.button 
+                        className="sort_button"
                         variants={headerVariants}
                         whileHover={headerVariants.hover}
                         whileTap={headerVariants.tap}
                         style={{
-                            pointerEvents: sortingInProgress ? "none" : "auto", 
-                            color: sortingInProgress ? "gray" : "white",
+                            pointerEvents: disable ? "none" : "auto", 
+                            color: disable ? "gray" : "white",
                         }}
-                        onClick={play}
+                        onClick={() => setDisable(true)}
                     >
                         Play
-                    </motion.span>
-                </div>
-                <div className="sort_option">
-                    <motion.span 
-                        className="sort_name"
-                        variants={headerVariants}
-                        whileHover={headerVariants.hover}
-                        whileTap={headerVariants.tap}
-                        style={{
-                            pointerEvents: sortingInProgress ? "none" : "auto",
-                            color: sortingInProgress ? "gray" : "white",
-                        }}
-                        onClick = {() => stop()}
-                    >
-                        Stop
-                    </motion.span>
+                    </motion.button>
                 </div>
             </div>
         </div>

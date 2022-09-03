@@ -39,17 +39,6 @@
     margin-left: auto;
 }
 
-.sort_option {
-    display: flex;
-    color: white;
-    margin-left: 5px;
-    margin-right: 10px;
-}
-
-.sort_name {
-    border-radius: 12px;
-    padding: 4px 10px 4px 10px;
-}
 
 /* Header Sort Title */
 .header_nav_back {
@@ -65,4 +54,40 @@
 .sort_title {
     color: white;
     margin-left: 10px;
+}
+
+.header_sort_nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 60%;
+    margin-right: 80px;
+    margin-left: auto;
+}
+
+
+.sort_option {
+    display: flex;
+    color: white;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.sort_name {
+    border-radius: 12px;
+    padding: 4px 10px 4px 10px;
+}
+
+.sort_button {
+    font-size: 1em;
+    background: none;
+    border: none;
+    border-radius: 12px;
+    padding: 4px 10px 4px 10px;
+}
+
+.slider {
+    min-width: 25%;
+    margin-left: 50px;
+    margin-right: 25px;
 }

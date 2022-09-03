@@ -1,10 +1,9 @@
 import React, { useState, useEffect }  from 'react'
-import './style/Merge.css'
 import { useParams } from 'react-router-dom'
 
 import randomRange from '../../utility/randomRange'
 import mSort from '../../sorting/mergeSort'
-import Bars from './components/Bars'
+import Bars from '../../components/Bars'
 import HeaderSort from '../../components/HeaderSort'
 
 const Merge = ({ headerVariants }) => {
@@ -12,8 +11,6 @@ const Merge = ({ headerVariants }) => {
     const [bars, setBars] = useState([])
     const [barSize, setBarSize] = useState(100);
     const [sortingAlgorithm, setSortingAlgorithm] = useState("");
-    const [sortingInProgress, setSortingInProgress] = useState(false);
-    // const [sortingComplete, setSortingComplete] = useState(false);
 
     useEffect(() => {
         setSortingAlgorithm(params.sortingAlgorithm);
@@ -26,7 +23,6 @@ const Merge = ({ headerVariants }) => {
     }, [barSize])
 
     const play = () => {
-        console.log("hello from parent")
         const visuals = mSort(bars)
 
         // console.log("bars after: ", visuals);
@@ -63,8 +59,8 @@ const Merge = ({ headerVariants }) => {
               prevIndex2 = index2;
             }
             else {
-              console.log("prevIndex1: ", prevIndex1);
-              console.log("prevIndex2: ", prevIndex2)
+            //   console.log("prevIndex1: ", prevIndex1);
+            //   console.log("prevIndex2: ", prevIndex2)
               const prevInit1 = barsArr[prevIndex1].style
               const prevInit2 = barsArr[prevIndex2].style
 
@@ -80,7 +76,7 @@ const Merge = ({ headerVariants }) => {
           }
           // For every other bar change the height to imitate swapping
           else {
-            console.log("i not colorchange: ", i)
+            // console.log("i not colorchange: ", i)
             const [index, height] = item
             const barI = barsArr[index].style
             setTimeout(() => {
@@ -89,7 +85,6 @@ const Merge = ({ headerVariants }) => {
 
           }
         })
-        // setSortingComplete(true);   
     }
 
   return (
@@ -97,18 +92,13 @@ const Merge = ({ headerVariants }) => {
         <HeaderSort 
             headerVariants={headerVariants} 
             setBarSize={setBarSize} 
-            sortingInProgress={sortingInProgress}
-            setSortingInProgress={setSortingInProgress}
+            sortingAlgo = {sortingAlgorithm}
             play = {play}
         />
 
         <Bars 
             bars={bars}
-            size={barSize} 
             sortingAlgo={sortingAlgorithm} 
-            setSortingInProgress={setSortingInProgress}
-            sortingInProgress = {sortingInProgress}
-
         />
         
     </>
