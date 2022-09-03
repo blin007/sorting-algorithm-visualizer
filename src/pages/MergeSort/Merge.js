@@ -18,10 +18,6 @@ const Merge = ({ headerVariants }) => {
         //eslint-disable-next-line
     }, [])
 
-    useEffect(() => {
-
-    }, [sortingInProgress])
-
   return (
     <>
         <HeaderSort 

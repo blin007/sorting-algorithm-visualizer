@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import '../styles/Header.css'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import Bars from '../pages/MergeSort/components/Bars'
 
 const HeaderSort = ({ headerVariants, setBarSize, sortingInProgress, setSortingInProgress }) => {
 
     const play = () => {
         setSortingInProgress(true);
+        Bars.sort();
     }
 
     const stop = () => {
