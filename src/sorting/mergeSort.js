@@ -38,17 +38,17 @@ const mergeSort = (left, right, arr, temp) => {
 
 const merge = (left, mid, right, arr, temp) => {
     let index = left;
-    let jndex = mid;
+    let jndex = mid + 1;
     let counter = left;
     
     // console.log("index at beginning: ", index);
     // console.log("jndex at beginning: ", jndex);
     // console.log("counter at beginning: ", counter);
-    while(index < mid && jndex < right) {
-        // console.log("keeping track of indices******")
-        // console.log("index: ", index)
-        // console.log("jndex: ", jndex)
-        // console.log("counter: ", counter)
+    while(index <= mid && jndex <= right) {
+        console.log("keeping track of indices******")
+        console.log("index: ", index)
+        console.log("jndex: ", jndex)
+        console.log("counter: ", counter)
 
         //populate visual index array
 
@@ -71,9 +71,20 @@ const merge = (left, mid, right, arr, temp) => {
     }
 
     //append remaining items in to arr
-    if (index < mid) jndex = index; //right subarray finished so set jndex to left index
+    if (index <= mid) jndex = index; //right subarray finished so set jndex to left index
 
-    while (counter < right) {
+    // while (index <= mid) {
+    //     arr[counter] = temp[index]
+    //     index++
+    //     counter++
+    // }
+
+    // while (jndex <= right) {
+    //     arr[counter] = temp[jndex]
+    //     jndex++
+    //     counter++
+    // }
+    while (counter <= right) {
         arr[counter] = temp[jndex];
         jndex++;
         counter++;

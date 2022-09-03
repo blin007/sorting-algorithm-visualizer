@@ -36,10 +36,11 @@ const Bars = ({ size, sortingAlgo, setSortingInProgress, sortingInProgress }) =>
     //   //eslint-disable-next-line
     // }, [bars, sortingInProgress])
 
-    const sort = () => {
+    const sort = (e) => {
+        e.preventDefault();
          console.log('bars before: ', bars);
 
-        mergeSort(0, bars.length, bars, bars.slice())
+        mergeSort(0, bars.length - 1, bars, bars.slice())
 
         console.log("bars after: ", bars);
 
@@ -48,7 +49,7 @@ const Bars = ({ size, sortingAlgo, setSortingInProgress, sortingInProgress }) =>
 
   return (
     <div className="bars">
-        <button onClick={() => sort()}>Sort</button>
+        <button onClick={(e) => sort(e)}>Sort</button>
         <div className="bars_container">
           {bars.map((item, i) => (
             <div className="bar" key={i} style={{ 
