@@ -1,15 +1,11 @@
 import React, { useState } from 'react'
 import '../styles/Header.css'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import Bars from '../pages/MergeSort/components/Bars'
+import { Link, useParams } from 'react-router-dom'
+import { MdNavigateBefore } from "react-icons/md";
 
-const HeaderSort = ({ headerVariants, setBarSize, sortingInProgress, setSortingInProgress }) => {
-
-    const play = () => {
-        setSortingInProgress(true);
-        Bars.sort();
-    }
+const HeaderSort = ({ headerVariants, setBarSize, sortingInProgress, setSortingInProgress, play }) => {
+    const params = useParams();
 
     const stop = () => {
         setSortingInProgress(false);
@@ -18,24 +14,25 @@ const HeaderSort = ({ headerVariants, setBarSize, sortingInProgress, setSortingI
     const handleInput = (e) => {
         // console.log('e: ', e);
         setBarSize(Number(e.target.value))
-        // console.log("sorting algorithm from path param: ", params.sortingAlgorithm)
+        console.log("sorting algorithm from path param: ", params.sortingAlgorithm)
     }
 
   return (
     <>
         <div className="header">
             <Link to="/" className="header_link">
-                <div className="header_title">
-                        <motion.span 
-                            className="header_titleName"
-                            variants={headerVariants}
-                            whileHover={headerVariants.hover}
-                            whileTap={headerVariants.tap}
-                        >
-                            Sorting Algorithm Visualizer
-                        </motion.span>
-                </div>
+                <motion.div 
+                    className="header_nav_back"
+                    variants={headerVariants}
+                    whileHover={headerVariants.hover}
+                    whileTap={headerVariants.tap}
+                >
+                    <MdNavigateBefore />
+                </motion.div>
             </Link>
+            <div className="sort_title">
+                <h2>{params.sortingAlgorithm.toUpperCase()} SORT</h2>
+            </div>
 
             <div className="header_sort_nav">
                 <input 
@@ -57,7 +54,7 @@ const HeaderSort = ({ headerVariants, setBarSize, sortingInProgress, setSortingI
                             pointerEvents: sortingInProgress ? "none" : "auto", 
                             color: sortingInProgress ? "gray" : "white",
                         }}
-                        onClick={() => play()}
+                        onClick={play}
                     >
                         Play
                     </motion.span>
