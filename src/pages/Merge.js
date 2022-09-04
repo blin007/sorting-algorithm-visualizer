@@ -1,10 +1,10 @@
 import React, { useState, useEffect }  from 'react'
 import { useParams } from 'react-router-dom'
 
-import randomRange from '../../utility/randomRange'
-import mSort from '../../sorting/mergeSort'
-import Bars from '../../components/Bars'
-import HeaderSort from '../../components/HeaderSort'
+import randomRange from '../utility/randomRange'
+import mSort from '../sorting/mergeSort'
+import Bars from '../components/Bars'
+import HeaderSort from '../components/HeaderSort'
 
 const Merge = ({ headerVariants }) => {
     let params = useParams();

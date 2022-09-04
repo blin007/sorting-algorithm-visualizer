@@ -8,7 +8,7 @@ import homeVariants from './animations/homeVariants';
 //import components / pages
 import Header from './components/Header';
 import Home from './pages/Home/Home';
-import Merge from './pages/MergeSort/Merge';
+import Merge from './pages/Merge';
 
 function App() {
   return (
