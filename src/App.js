@@ -9,6 +9,7 @@ import homeVariants from './animations/homeVariants';
 import Header from './components/Header';
 import Home from './pages/Home/Home';
 import Merge from './pages/Merge';
+import Quick from './pages/Quick';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={[<Header headerVariants={headerVariants}/>, <Home homeVariants={homeVariants}/>]}/>
-          <Route path="/:sortingAlgorithm" element={[<Merge headerVariants={headerVariants} />]} />
+          <Route path="/merge" element={[<Merge headerVariants={headerVariants} />]} />
+          <Route path="/quick" element={[<Quick headerVariants={headerVariants}/>]} />
         </Routes>
       </div>
     </Router>

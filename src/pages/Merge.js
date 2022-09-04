@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from 'react'
-import { useParams } from 'react-router-dom'
+// import { useParams } from 'react-router-dom'
 
 import randomRange from '../utility/randomRange'
 import mSort from '../sorting/mergeSort'
@@ -7,13 +7,13 @@ import Bars from '../components/Bars'
 import HeaderSort from '../components/HeaderSort'
 
 const Merge = ({ headerVariants }) => {
-    let params = useParams();
+    // let params = useParams();
     const [bars, setBars] = useState([])
     const [barSize, setBarSize] = useState(100);
     const [sortingAlgorithm, setSortingAlgorithm] = useState("");
 
     useEffect(() => {
-        setSortingAlgorithm(params.sortingAlgorithm);
+        setSortingAlgorithm("merge");
         //eslint-disable-next-line
     }, [])
 
