@@ -94,10 +94,12 @@
     border: none;
     border-radius: 12px;
     padding: 4px 10px 4px 10px;
+    cursor: pointer;
 }
 
 .slider {
     min-width: 25%;
     margin-left: 50px;
     margin-right: 25px;
+    cursor: pointer;
 }
