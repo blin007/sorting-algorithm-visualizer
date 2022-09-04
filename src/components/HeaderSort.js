@@ -2,13 +2,19 @@ import React, { useState } from 'react'
 import '../styles/Header.css'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { MdNavigateBefore } from "react-icons/md";
+import { MdNavigateBefore, MdRefresh } from "react-icons/md";
 
 const HeaderSort = ({ headerVariants, setBarSize, sortingAlgo, play }) => {
     const [disable, setDisable] = useState(false);
 
     const handleInput = (e) => {
         setBarSize(Number(e.target.value))
+    }
+
+    const handleReload = (e) => {
+        e.preventDefault();
+        window.location.reload();
+        setDisable(false);
     }
 
   return (
@@ -27,6 +33,17 @@ const HeaderSort = ({ headerVariants, setBarSize, sortingAlgo, play }) => {
             <div className="sort_title">
                 <h2>{sortingAlgo.toUpperCase()} SORT</h2>
             </div>
+            {disable && (
+                <motion.div 
+                    className="sort_reload"
+                    variants={headerVariants}
+                    whileHover={headerVariants.hover}
+                    whileTap={headerVariants.tap}
+                    onClick={handleReload}
+                >
+                    Refresh <MdRefresh style={{marginLeft: "5px"}}/>
+                </motion.div>
+            )}
 
             <div className="header_sort_nav">
                 <input 
