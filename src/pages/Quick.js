@@ -3,11 +3,13 @@ import randomRange from '../utility/randomRange';
 
 import HeaderSort from '../components/HeaderSort';
 import Bars from '../components/Bars';
+import qSort from '../sorting/quickSort';
+
 
 const Quick = ({ headerVariants }) => {
     const [bars, setBars] = useState([])
     const [barSize, setBarSize] = useState(100);
-    const [sortingAlgorithm, setSortingAlgorithm] = useState("");
+    const [sortingAlgorithm, setSortingAlgorithm] = useState("")
 
     useEffect(() => {
         setSortingAlgorithm("quick");
@@ -20,7 +22,60 @@ const Quick = ({ headerVariants }) => {
     }, [barSize])
     
     const play = () => {
-        console.log("hello from parent")
+        console.log("bars from before: ", bars)
+        const barsArr = document.getElementsByClassName("bar")
+        const visuals = qSort(bars, barSize)
+        console.log("bars after: ", bars)
+        console.log("visuals: ", visuals)
+        // let pivotIndex = null;
+        visuals.forEach((item, i) => {
+            // if (item.pivot){
+            //     pivotIndex = item.pivot
+            //     const pivotStyle = barsArr[pivotIndex].style
+            //     setTimeout(() => {
+            //         pivotStyle.backgroundColor = "#0a0a0a"
+            //     }, i * 100 )
+            // }
+            // else {
+                if(!item.colorBack){
+                    const lIndex = item.l;
+                    const lHeight = item.heightL;
+                    const rIndex = item.r;
+                    const rHeight = item.heightR;
+                    const lStyle = barsArr[lIndex].style
+                    const rStyle = barsArr[rIndex].style
+
+                    setTimeout(() => {
+                        lStyle.backgroundColor = "#6eff7c"
+                        rStyle.backgroundColor = "#6eff7c"
+                        setTimeout(() => {
+                            lStyle.height = `${lHeight}px` 
+                            rStyle.height = `${rHeight}px`
+                        }, i * 100)
+                    }, i * 100 )
+                }
+                else {
+                    const lIndex = item.l;
+                    const lHeight = item.heightL;
+                    const rIndex = item.r;
+                    const rHeight = item.heightR;
+                    const lStyle = barsArr[lIndex].style
+                    const rStyle = barsArr[rIndex].style
+
+                    setTimeout(() => {
+                        lStyle.backgroundColor = "#cf76cd"
+                        rStyle.backgroundColor = "#cf76cd"
+                        setTimeout(() => {
+                            lStyle.height = `${lHeight}px` 
+                            rStyle.height = `${rHeight}px`
+                        }, i * 100)
+                    }, i * 100 )
+                }
+            }
+
+        // }
+        )
+        console.log("barsArr: ", barsArr)
     }
 
   return (

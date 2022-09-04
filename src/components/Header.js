@@ -34,6 +34,18 @@ const Header = ({ headerVariants }) => {
                         </motion.span>
                     </div>
                 </Link>
+                <Link to="/heap" className="header_link">
+                    <div className="sort_option">
+                        <motion.span 
+                            className="sort_name"
+                            variants={headerVariants}
+                            whileHover={headerVariants.hover}
+                            whileTap={headerVariants.tap}
+                        >
+                            Heap Sort
+                        </motion.span>
+                    </div>
+                </Link>
                 <Link to="/merge" className="header_link">
                     <div className="sort_option">
                         <motion.span 

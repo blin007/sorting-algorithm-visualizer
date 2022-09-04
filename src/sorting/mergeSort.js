@@ -1,5 +1,4 @@
 const mSort = (array) => {
-    //base
     if (array.length <= 1) return array;
 
     //create shallow copy of array
