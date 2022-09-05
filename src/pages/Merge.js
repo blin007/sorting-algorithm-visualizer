@@ -9,7 +9,7 @@ import HeaderSort from '../components/HeaderSort'
 const Merge = ({ headerVariants }) => {
     // let params = useParams();
     const [bars, setBars] = useState([])
-    const [barSize, setBarSize] = useState(100);
+    const [barSize, setBarSize] = useState(50);
     const [sortingAlgorithm, setSortingAlgorithm] = useState("");
 
     useEffect(() => {

@@ -8,7 +8,7 @@ import qSort from '../sorting/quickSort';
 
 const Quick = ({ headerVariants }) => {
     const [bars, setBars] = useState([])
-    const [barSize, setBarSize] = useState(100);
+    const [barSize, setBarSize] = useState(50);
     const [sortingAlgorithm, setSortingAlgorithm] = useState("")
 
     useEffect(() => {
@@ -37,7 +37,7 @@ const Quick = ({ headerVariants }) => {
             //     }, i * 100 )
             // }
             // else {
-                if(!item.colorBack){
+                if(!item.colorBack && !item.colorDone){
                     const lIndex = item.l;
                     const lHeight = item.heightL;
                     const rIndex = item.r;
@@ -48,29 +48,49 @@ const Quick = ({ headerVariants }) => {
                     setTimeout(() => {
                         lStyle.backgroundColor = "#6eff7c"
                         rStyle.backgroundColor = "#6eff7c"
-                        setTimeout(() => {
-                            lStyle.height = `${lHeight}px` 
-                            rStyle.height = `${rHeight}px`
-                        }, i * 100)
+
+                    }, i * 100 )
+                
+                    setTimeout(() => {
+                        lStyle.height = `${lHeight}px` 
+                        rStyle.height = `${rHeight}px`
+                    }, i * 100)
+                } 
+                else if (item.colorDone) {
+                    const lIndex = item.l;
+                    // const lHeight = item.heightL;
+                    const rIndex = item.r;
+                    // const rHeight = item.heightR;
+                    const lStyle = barsArr[lIndex].style
+                    const rStyle = barsArr[rIndex].style
+
+                    setTimeout(() => {
+                        lStyle.backgroundColor = "#6eff7c"
+                        rStyle.backgroundColor = "#6eff7c"
+                        // setTimeout(() => {
+                        //     lStyle.height = `${lHeight}px` 
+                        //     rStyle.height = `${rHeight}px`
+                        // }, i * 100)
                     }, i * 100 )
                 }
                 else {
                     const lIndex = item.l;
-                    const lHeight = item.heightL;
+                    // const lHeight = item.heightL;
                     const rIndex = item.r;
-                    const rHeight = item.heightR;
+                    // const rHeight = item.heightR;
                     const lStyle = barsArr[lIndex].style
                     const rStyle = barsArr[rIndex].style
 
                     setTimeout(() => {
                         lStyle.backgroundColor = "#cf76cd"
                         rStyle.backgroundColor = "#cf76cd"
-                        setTimeout(() => {
-                            lStyle.height = `${lHeight}px` 
-                            rStyle.height = `${rHeight}px`
-                        }, i * 100)
+                        // setTimeout(() => {
+                        //     lStyle.height = `${lHeight}px` 
+                        //     rStyle.height = `${rHeight}px`
+                        // }, i * 100)
                     }, i * 100 )
                 }
+
             }
 
         // }
