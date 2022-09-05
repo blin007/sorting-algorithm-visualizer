@@ -4,11 +4,15 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { MdNavigateBefore, MdRefresh } from "react-icons/md";
 
-const HeaderSort = ({ headerVariants, setBarSize, sortingAlgo, play }) => {
+const HeaderSort = ({ headerVariants, setBarSize, setSpeed, sortingAlgo, play }) => {
     const [disable, setDisable] = useState(false);
 
-    const handleInput = (e) => {
+    const handleInputBarSize = (e) => {
         setBarSize(Number(e.target.value))
+    }
+
+    const handleInputSpeed = (e) => {
+        setSpeed(Number(e.target.value))
     }
 
     const handleReload = (e) => {
@@ -46,13 +50,26 @@ const HeaderSort = ({ headerVariants, setBarSize, sortingAlgo, play }) => {
             )}
 
             <div className="header_sort_nav">
+                <label for="speed">Speed: </label>
                 <input 
+                    id="speed"
+                    className="slider"
+                    type="range"
+                    min="15"
+                    max="150"
+                    step="5"
+                    onInput={e => handleInputSpeed(e)}
+                    disabled = {disable ? true : false}
+                />
+                <label for="number">Number of Bars: </label>
+                <input 
+                    id="number"
                     className="slider"
                     type="range"
                     min="25"
                     max="200"
                     step="25"
-                    onInput={e => handleInput(e)}
+                    onInput={e => handleInputBarSize(e)}
                     disabled = {disable ? true : false}
                 />
                 <div 

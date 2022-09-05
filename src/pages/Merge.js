@@ -1,5 +1,4 @@
 import React, { useState, useEffect }  from 'react'
-// import { useParams } from 'react-router-dom'
 
 import randomRange from '../utility/randomRange'
 import mSort from '../sorting/mergeSort'
@@ -7,9 +6,9 @@ import Bars from '../components/Bars'
 import HeaderSort from '../components/HeaderSort'
 
 const Merge = ({ headerVariants }) => {
-    // let params = useParams();
     const [bars, setBars] = useState([])
     const [barSize, setBarSize] = useState(50);
+    const [speed, setSpeed] = useState(50);
     const [sortingAlgorithm, setSortingAlgorithm] = useState("");
 
     useEffect(() => {
@@ -53,7 +52,7 @@ const Merge = ({ headerVariants }) => {
             setTimeout(() => {
               barInit1.backgroundColor = "#6eff7c"
               barInit2.backgroundColor = "#6eff7c"
-            }, i * 15 )
+            }, i * speed )
 
             //save indices to change color to show completion
             prevIndex1 = index1;
@@ -69,7 +68,7 @@ const Merge = ({ headerVariants }) => {
             setTimeout(() => {
               prevInit1.backgroundColor = "#cf76cd"
               prevInit2.backgroundColor = "#cf76cd"
-            }, i * 15 )  
+            }, i * speed )  
             prevIndex1 = null;
             prevIndex2 = null;
           }
@@ -82,7 +81,7 @@ const Merge = ({ headerVariants }) => {
           const barI = barsArr[index].style
           setTimeout(() => {
             barI.height = `${height}px` 
-          }, i * 15)
+          }, i * speed)
 
         }
       })
@@ -93,6 +92,7 @@ const Merge = ({ headerVariants }) => {
         <HeaderSort 
             headerVariants={headerVariants} 
             setBarSize={setBarSize} 
+            setSpeed={setSpeed}
             sortingAlgo = {sortingAlgorithm}
             play = {play}
         />

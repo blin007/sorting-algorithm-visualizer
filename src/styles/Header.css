@@ -97,9 +97,13 @@
     cursor: pointer;
 }
 
+.header_sort_nav label {
+    color: white;
+}
+
 .slider {
     min-width: 25%;
-    margin-left: 50px;
+    margin-left: 10px;
     margin-right: 25px;
     cursor: pointer;
 }

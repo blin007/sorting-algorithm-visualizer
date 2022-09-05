@@ -7,6 +7,7 @@ import Bars from '../components/Bars'
 const Bubble = ({ headerVariants }) => {
     const [bars, setBars] = useState([])
     const [barSize, setBarSize] = useState(50);
+    const [speed, setSpeed] = useState(50);
     const [sortingAlgorithm, setSortingAlgorithm] = useState("")
 
     useEffect(() => {
@@ -29,6 +30,7 @@ const Bubble = ({ headerVariants }) => {
         <HeaderSort 
             headerVariants={headerVariants} 
             setBarSize={setBarSize} 
+            setSpeed={setSpeed}
             sortingAlgo = {sortingAlgorithm}
             play = {play}
         />

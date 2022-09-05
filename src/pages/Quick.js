@@ -9,6 +9,7 @@ import qSort from '../sorting/quickSort';
 const Quick = ({ headerVariants }) => {
     const [bars, setBars] = useState([])
     const [barSize, setBarSize] = useState(50);
+    const [speed, setSpeed] = useState(50);
     const [sortingAlgorithm, setSortingAlgorithm] = useState("")
 
     useEffect(() => {
@@ -49,12 +50,12 @@ const Quick = ({ headerVariants }) => {
                         lStyle.backgroundColor = "#6eff7c"
                         rStyle.backgroundColor = "#6eff7c"
 
-                    }, i * 150 )
+                    }, i * speed )
                 
                     setTimeout(() => {
                         lStyle.height = `${lHeight}px` 
                         rStyle.height = `${rHeight}px`
-                    }, i * 150)
+                    }, i * speed)
                 } 
                 else {
                     const lIndex = item.l;
@@ -71,7 +72,7 @@ const Quick = ({ headerVariants }) => {
                         //     lStyle.height = `${lHeight}px` 
                         //     rStyle.height = `${rHeight}px`
                         // }, i * 100)
-                    }, i * 150 )
+                    }, i * speed )
                 }
 
             }
@@ -86,6 +87,7 @@ const Quick = ({ headerVariants }) => {
         <HeaderSort 
             headerVariants={headerVariants} 
             setBarSize={setBarSize} 
+            setSpeed={setSpeed}
             sortingAlgo = {sortingAlgorithm}
             play = {play}
         />
