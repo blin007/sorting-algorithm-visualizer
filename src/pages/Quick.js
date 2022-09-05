@@ -37,7 +37,7 @@ const Quick = ({ headerVariants }) => {
             //     }, i * 100 )
             // }
             // else {
-                if(!item.colorBack && !item.colorDone){
+                if(!item.colorBack){
                     const lIndex = item.l;
                     const lHeight = item.heightL;
                     const rIndex = item.r;
@@ -49,30 +49,13 @@ const Quick = ({ headerVariants }) => {
                         lStyle.backgroundColor = "#6eff7c"
                         rStyle.backgroundColor = "#6eff7c"
 
-                    }, i * 100 )
+                    }, i * 150 )
                 
                     setTimeout(() => {
                         lStyle.height = `${lHeight}px` 
                         rStyle.height = `${rHeight}px`
-                    }, i * 100)
+                    }, i * 150)
                 } 
-                else if (item.colorDone) {
-                    const lIndex = item.l;
-                    // const lHeight = item.heightL;
-                    const rIndex = item.r;
-                    // const rHeight = item.heightR;
-                    const lStyle = barsArr[lIndex].style
-                    const rStyle = barsArr[rIndex].style
-
-                    setTimeout(() => {
-                        lStyle.backgroundColor = "#6eff7c"
-                        rStyle.backgroundColor = "#6eff7c"
-                        // setTimeout(() => {
-                        //     lStyle.height = `${lHeight}px` 
-                        //     rStyle.height = `${rHeight}px`
-                        // }, i * 100)
-                    }, i * 100 )
-                }
                 else {
                     const lIndex = item.l;
                     // const lHeight = item.heightL;
@@ -88,7 +71,7 @@ const Quick = ({ headerVariants }) => {
                         //     lStyle.height = `${lHeight}px` 
                         //     rStyle.height = `${rHeight}px`
                         // }, i * 100)
-                    }, i * 100 )
+                    }, i * 150 )
                 }
 
             }

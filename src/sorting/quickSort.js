@@ -19,7 +19,7 @@ const quickSort = (left, right, arr, visualIndexArr) => {
         // push indices and height to visual index array
         visualIndexArr.push({l, r, heightL: arr[l], heightR: arr[r]})
         visualIndexArr.push({l, r, heightL: arr[l], heightR: arr[r], colorBack: true})
-        visualIndexArr.push({l, r, heightL: arr[l], heightR: arr[r], colorDone: true})
+        // visualIndexArr.push({l, r, heightL: arr[l], heightR: arr[r], colorDone: true})
         do{ 
             l++ 
         } while (arr[l] < pivot);
@@ -32,7 +32,7 @@ const quickSort = (left, right, arr, visualIndexArr) => {
     swap(arr, left, r)
     visualIndexArr.push({l: left, r, heightL: arr[left], heightR: arr[r]})
     visualIndexArr.push({l: left, r, heightL: arr[left], heightR: arr[r], colorBack: true})
-    visualIndexArr.push({l: left, r, heightL: arr[left], heightR: arr[r], colorDone: true})
+    // visualIndexArr.push({l: left, r, heightL: arr[left], heightR: arr[r], colorDone: true})
     quickSort(left, r - 1, arr, visualIndexArr)
     quickSort(r + 1, right, arr, visualIndexArr)
 }
