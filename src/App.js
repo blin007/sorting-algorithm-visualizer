@@ -10,6 +10,7 @@ import Header from './components/Header';
 import Home from './pages/Home/Home';
 import Merge from './pages/Merge';
 import Quick from './pages/Quick';
+import Bubble from './pages/Bubble';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={[<Header headerVariants={headerVariants}/>, <Home homeVariants={homeVariants}/>]}/>
           <Route path="/merge" element={[<Merge headerVariants={headerVariants} />]} />
           <Route path="/quick" element={[<Quick headerVariants={headerVariants}/>]} />
+          <Route path="/bubble" element={[<Bubble headerVariants={headerVariants}/>]} />
         </Routes>
       </div>
     </Router>
