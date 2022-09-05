@@ -21,7 +21,6 @@ const Bubble = ({ headerVariants }) => {
         setBars(Array.from({length: barSize}, () => randomRange(700)));
     }, [barSize])
 
-    //TODO
     const play = () => {
         console.log("bars from before: ", bars)
         const barsArr = document.getElementsByClassName("bar")
