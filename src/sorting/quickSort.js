@@ -1,3 +1,5 @@
+import { swap } from "../utility/swap"
+
 const qSort = (bars, barSize) => {
     if (bars.length <= 1) return bars
 
@@ -37,10 +39,10 @@ const quickSort = (left, right, arr, visualIndexArr) => {
     quickSort(r + 1, right, arr, visualIndexArr)
 }
 
-const swap = (arr, left, right) => {
-    let temp = arr[left]
-    arr[left] = arr[right]
-    arr[right] = temp
-}
+// const swap = (arr, left, right) => {
+//     let temp = arr[left]
+//     arr[left] = arr[right]
+//     arr[right] = temp
+// }
 
 export default qSort
