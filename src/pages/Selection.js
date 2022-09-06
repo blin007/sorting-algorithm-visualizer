@@ -3,7 +3,7 @@ import React, { useState, useEffect} from 'react'
 import randomRange from '../utility/randomRange'
 import HeaderSort from '../components/HeaderSort'
 import Bars from '../components/Bars'
-import sSort from '../sorting/selectionSort'
+import sSort from '../algorithms/selectionSort'
 
 
 const Selection = ({ headerVariants }) => {

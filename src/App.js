@@ -2,8 +2,8 @@ import './styles/App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 //import animations
-import headerVariants from './animations/headerVariants';
-import homeVariants from './animations/homeVariants';
+import headerVariants from './framer-motion/headerVariants';
+import homeVariants from './framer-motion/homeVariants';
 
 //import components / pages
 import Header from './components/Header';

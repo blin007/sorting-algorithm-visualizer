@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import iSort from '../sorting/insertionSort'
+import iSort from '../algorithms/insertionSort'
 import randomRange from '../utility/randomRange'
 import HeaderSort from '../components/HeaderSort'
 import Bars from '../components/Bars'

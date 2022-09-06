@@ -4,7 +4,7 @@ import randomRange from '../utility/randomRange';
 
 import HeaderSort from '../components/HeaderSort';
 import Bars from '../components/Bars';
-import qSort from '../sorting/quickSort';
+import qSort from '../algorithms/quickSort';
 
 
 const Quick = ({ headerVariants }) => {

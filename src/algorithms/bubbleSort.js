@@ -9,7 +9,7 @@ const bSort = (bars, barSize) => {
 }
 
 const bubbleSort = (length, arr, visualIndexArr) => {
-    for (let high = length - 1; high > 1; high--){
+    for (let high = length - 1; high > 0; high--){
         for (let low = 0; low < high; low++){
             if (arr[low] > arr[low+1]){
                 swap(arr, low, low+1);

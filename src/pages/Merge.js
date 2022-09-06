@@ -1,7 +1,7 @@
 import React, { useState, useEffect }  from 'react'
 
 import randomRange from '../utility/randomRange'
-import mSort from '../sorting/mergeSort'
+import mSort from '../algorithms/mergeSort'
 import Bars from '../components/Bars'
 import HeaderSort from '../components/HeaderSort'
 

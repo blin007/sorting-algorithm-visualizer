@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import randomRange from '../utility/randomRange'
 import HeaderSort from '../components/HeaderSort'
 import Bars from '../components/Bars'
-import bSort from '../sorting/bubbleSort'
+import bSort from '../algorithms/bubbleSort'
 
 const Bubble = ({ headerVariants }) => {
     const [bars, setBars] = useState([])
