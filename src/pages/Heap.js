@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import HeaderSort from '../components/HeaderSort';
 import Bars from '../components/Bars';
 import randomRange from '../utility/randomRange';
+import hSort from '../algorithms/heapSort';
 
 
 const Heap = ({ headerVariants }) => {
@@ -23,7 +24,44 @@ const Heap = ({ headerVariants }) => {
 
     //TODO
     const play = () => {
-        
+        console.log("bars from before: ", bars)
+        const barsArr = document.getElementsByClassName("bar")
+        const visuals = hSort(bars, barSize)
+        console.log("bars after: ", bars)
+        console.log("visuals: ", visuals)
+
+        visuals.forEach((item, i) => {
+            if(!item.colorBack){
+                const lIndex = item.l;
+                const lHeight = item.heightL;
+                const rIndex = item.r;
+                const rHeight = item.heightR;
+                const lStyle = barsArr[lIndex].style
+                const rStyle = barsArr[rIndex].style
+
+                setTimeout(() => {
+                    lStyle.backgroundColor = "#6eff7c"
+                    rStyle.backgroundColor = "#6eff7c"
+
+                }, i * speed )
+            
+                setTimeout(() => {
+                    lStyle.height = `${lHeight}px` 
+                    rStyle.height = `${rHeight}px`
+                }, i * speed)
+            } 
+            else {
+                const lIndex = item.l;
+                const rIndex = item.r;
+                const lStyle = barsArr[lIndex].style
+                const rStyle = barsArr[rIndex].style
+
+                setTimeout(() => {
+                    lStyle.backgroundColor = "#cf76cd"
+                    rStyle.backgroundColor = "#cf76cd"
+                }, i * speed )
+            }
+        })
     }
 
   return (

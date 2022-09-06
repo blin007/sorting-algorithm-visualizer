@@ -98,12 +98,33 @@
 }
 
 .header_sort_nav label {
+    font-size: 1em;
     color: white;
+    margin-left: 10px;
 }
+
+.speed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
 
 .slider {
     min-width: 25%;
     margin-left: 10px;
-    margin-right: 25px;
+    margin-right: 10px;
     cursor: pointer;
 }
+
+/* .speed_slider {
+    min-width: 25%;
+    margin-left: 10px;
+    margin-right: 25px;
+    cursor: pointer;
+    direction: rtl;
+} */
