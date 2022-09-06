@@ -13,6 +13,7 @@ import Quick from './pages/Quick';
 import Bubble from './pages/Bubble';
 import Insertion from './pages/Insertion';
 import Selection from './pages/Selection';
+import Heap from './pages/Heap';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={[<Header headerVariants={headerVariants}/>, <Home homeVariants={homeVariants}/>]}/>
           <Route path="/insertion" element={[<Insertion headerVariants={headerVariants} />]} />
+          <Route path="/heap" element={[<Heap headerVariants={headerVariants} />]} />
           <Route path="/merge" element={[<Merge headerVariants={headerVariants} />]} />
           <Route path="/quick" element={[<Quick headerVariants={headerVariants}/>]} />
           <Route path="/bubble" element={[<Bubble headerVariants={headerVariants}/>]} />
