@@ -12,6 +12,7 @@ import Merge from './pages/Merge';
 import Quick from './pages/Quick';
 import Bubble from './pages/Bubble';
 import Insertion from './pages/Insertion';
+import Selection from './pages/Selection';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/merge" element={[<Merge headerVariants={headerVariants} />]} />
           <Route path="/quick" element={[<Quick headerVariants={headerVariants}/>]} />
           <Route path="/bubble" element={[<Bubble headerVariants={headerVariants}/>]} />
+          <Route path="/selection" element={[<Selection headerVariants={headerVariants} />]} />
         </Routes>
       </div>
     </Router>

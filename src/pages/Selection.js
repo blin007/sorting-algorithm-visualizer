@@ -1,0 +1,85 @@
+import React, { useState, useEffect} from 'react'
+
+import randomRange from '../utility/randomRange'
+import HeaderSort from '../components/HeaderSort'
+import Bars from '../components/Bars'
+import sSort from '../sorting/selectionSort'
+
+
+const Selection = ({ headerVariants }) => {
+    const [bars, setBars] = useState([])
+    const [barSize, setBarSize] = useState(50);
+    const [speed, setSpeed] = useState(50);
+    const [sortingAlgorithm, setSortingAlgorithm] = useState("")
+
+    useEffect(() => {
+        setSortingAlgorithm("selection");
+        //eslint-disable-next-line
+    }, [])
+
+    //randomize bars each time size of arrays change
+    useEffect(() => {
+        setBars(Array.from({length: barSize}, () => randomRange(700)));
+    }, [barSize])
+
+    const play = () => {
+        console.log("bars from before: ", bars)
+        const barsArr = document.getElementsByClassName("bar")
+        const visuals = sSort(bars, barSize)
+        console.log("bars after: ", bars)
+        console.log("visuals: ", visuals)
+
+        visuals.forEach((item, i) => {
+            if(!item.colorBack){
+                const lIndex = item.l;
+                const lHeight = item.heightL;
+                const rIndex = item.r;
+                const rHeight = item.heightR;
+                const lStyle = barsArr[lIndex].style
+                const rStyle = barsArr[rIndex].style
+
+                setTimeout(() => {
+                    lStyle.backgroundColor = "#6eff7c"
+                    rStyle.backgroundColor = "#6eff7c"
+
+                }, i * speed )
+            
+                setTimeout(() => {
+                    lStyle.height = `${lHeight}px` 
+                    rStyle.height = `${rHeight}px`
+                }, i * speed)
+            } 
+            else {
+                const lIndex = item.l;
+                const rIndex = item.r;
+                const lStyle = barsArr[lIndex].style
+                const rStyle = barsArr[rIndex].style
+
+                setTimeout(() => {
+                    lStyle.backgroundColor = "#cf76cd"
+                    rStyle.backgroundColor = "#cf76cd"
+                }, i * speed )
+            }
+        })
+    }
+
+  return (
+    <>
+        <HeaderSort 
+            headerVariants={headerVariants} 
+            setBarSize={setBarSize} 
+            setSpeed={setSpeed}
+            sortingAlgo = {sortingAlgorithm}
+            play = {play}
+        />
+
+        <Bars 
+            bars={bars}
+            sortingAlgo={sortingAlgorithm} 
+        />
+        
+    </>
+  )
+}
+
+export default Selection
