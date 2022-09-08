@@ -38,8 +38,10 @@ const Bubble = ({ headerVariants }) => {
                 const rStyle = barsArr[rIndex].style
 
                 setTimeout(() => {
-                    lStyle.backgroundColor = "#6eff7c"
-                    rStyle.backgroundColor = "#6eff7c"
+                    // lStyle.backgroundColor = "#6eff7c"
+                    // rStyle.backgroundColor = "#6eff7c"
+                    lStyle.background = "linear-gradient(#b44efc, #9808ff)"
+                    rStyle.background = "linear-gradient(#b44efc, #9808ff)"
 
                 }, i * speed )
             
@@ -55,8 +57,10 @@ const Bubble = ({ headerVariants }) => {
                 const rStyle = barsArr[rIndex].style
 
                 setTimeout(() => {
-                    lStyle.backgroundColor = "#cf76cd"
-                    rStyle.backgroundColor = "#cf76cd"
+                    // lStyle.backgroundColor = "#cf76cd"
+                    // rStyle.backgroundColor = "#cf76cd"
+                    lStyle.background = "linear-gradient(#5cfacb, #02f5ac)"
+                    rStyle.background = "linear-gradient(#5cfacb, #02f5ac)"
                 }, i * speed )
             }
         })

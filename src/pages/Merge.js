@@ -45,13 +45,13 @@ const Merge = ({ headerVariants }) => {
             // console.log("item: ", item);
             // console.log("index1: ", index1)
             // console.log("index2: ", index2)
-            const barInit1 = barsArr[index1].style
-            const barInit2 = barsArr[index2].style
+            const lStyle = barsArr[index1].style
+            const rStyle = barsArr[index2].style
 
             //change color to green for the bars that are being currently swapped in the merge sort
             setTimeout(() => {
-              barInit1.backgroundColor = "#6eff7c"
-              barInit2.backgroundColor = "#6eff7c"
+              lStyle.background = "linear-gradient(#b44efc, #9808ff)"
+              rStyle.background = "linear-gradient(#b44efc, #9808ff)"
             }, i * speed )
 
             //save indices to change color to show completion
@@ -61,13 +61,13 @@ const Merge = ({ headerVariants }) => {
           else {
           //   console.log("prevIndex1: ", prevIndex1);
           //   console.log("prevIndex2: ", prevIndex2)
-            const prevInit1 = barsArr[prevIndex1].style
-            const prevInit2 = barsArr[prevIndex2].style
+            const prevLStyle = barsArr[prevIndex1].style
+            const prevRStyle = barsArr[prevIndex2].style
 
             //revert colors back
             setTimeout(() => {
-              prevInit1.backgroundColor = "#cf76cd"
-              prevInit2.backgroundColor = "#cf76cd"
+              prevLStyle.backgroundColor = "linear-gradient(#5cfacb, #02f5ac)"
+              prevRStyle.backgroundColor = "linear-gradient(#5cfacb, #02f5ac)"
             }, i * speed )  
             prevIndex1 = null;
             prevIndex2 = null;

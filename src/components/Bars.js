@@ -9,7 +9,8 @@ const Bars = ({ bars, sortingAlgo }) => {
           {bars.map((item, i) => (
             <div className="bar" key={i} style={{ 
               height: item,
-              backgroundColor: "red",
+              background: "linear-gradient(#ff4f90, #fa005c)"
+              // backgroundColor: "red",
             }} />
           ))}
         </div>
