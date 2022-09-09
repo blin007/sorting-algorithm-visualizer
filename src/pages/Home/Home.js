@@ -4,6 +4,7 @@ import './style/Loader.css'
 import { motion } from 'framer-motion'
 import sort_graphic from '../../assets/sort_graphic.png'
 import sort_graphic2 from '../../assets/sort_graphic2.png'
+import { AiFillGithub } from "react-icons/ai";
 
 const Home = ({ homeVariants }) => {
   return (
@@ -20,9 +21,10 @@ const Home = ({ homeVariants }) => {
           <p>Built using ReactJS </p>
           <p>and</p>
           <p>Framer Motion</p>
-          {/* <div className="panel_instruction">
-          
-          </div> */}
+          <div className="panel_instruction">
+            <p>Created by blin007</p>
+            <a href="https://github.com/blin007"><AiFillGithub size={40}/></a>
+          </div>
         </div>
         <div className="row home_graphics">
           <div className="col panel">
