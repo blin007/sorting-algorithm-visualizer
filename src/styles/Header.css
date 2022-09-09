@@ -9,6 +9,7 @@
     z-index: 1;
     width: 100%;
     background: linear-gradient(to right, rgb(69, 73, 153), rgb(19, 24, 69) 40%);
+    /* box-shadow: 0 4px 2px -2px rgb(69, 73, 153); */
 }
 
 .header_link {
