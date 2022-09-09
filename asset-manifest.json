@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/sorting-algorithm-visualizer/static/css/main.7c4fed8e.css",
-    "main.js": "/sorting-algorithm-visualizer/static/js/main.ad732b14.js",
+    "main.css": "/sorting-algorithm-visualizer/static/css/main.2e833663.css",
+    "main.js": "/sorting-algorithm-visualizer/static/js/main.5f1c42a5.js",
     "static/js/787.5de169b3.chunk.js": "/sorting-algorithm-visualizer/static/js/787.5de169b3.chunk.js",
     "static/media/sort_graphic.png": "/sorting-algorithm-visualizer/static/media/sort_graphic.65a89665f8ca786183e4.png",
     "static/media/sort_graphic2.png": "/sorting-algorithm-visualizer/static/media/sort_graphic2.81d2465b9f8a8842e16b.png",
     "static/media/Page.svg": "/sorting-algorithm-visualizer/static/media/Page.99594be732104c0d1f4b.svg",
     "index.html": "/sorting-algorithm-visualizer/index.html",
-    "main.7c4fed8e.css.map": "/sorting-algorithm-visualizer/static/css/main.7c4fed8e.css.map",
-    "main.ad732b14.js.map": "/sorting-algorithm-visualizer/static/js/main.ad732b14.js.map",
+    "main.2e833663.css.map": "/sorting-algorithm-visualizer/static/css/main.2e833663.css.map",
+    "main.5f1c42a5.js.map": "/sorting-algorithm-visualizer/static/js/main.5f1c42a5.js.map",
     "787.5de169b3.chunk.js.map": "/sorting-algorithm-visualizer/static/js/787.5de169b3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c4fed8e.css",
-    "static/js/main.ad732b14.js"
+    "static/css/main.2e833663.css",
+    "static/js/main.5f1c42a5.js"
   ]
 }
