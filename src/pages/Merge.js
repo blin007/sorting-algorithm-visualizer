@@ -66,8 +66,8 @@ const Merge = ({ headerVariants }) => {
 
             //revert colors back
             setTimeout(() => {
-              prevLStyle.backgroundColor = "linear-gradient(#5cfacb, #02f5ac)"
-              prevRStyle.backgroundColor = "linear-gradient(#5cfacb, #02f5ac)"
+              prevLStyle.background = "linear-gradient(#5cfacb, #02f5ac)"
+              prevRStyle.background = "linear-gradient(#5cfacb, #02f5ac)"
             }, i * speed )  
             prevIndex1 = null;
             prevIndex2 = null;

@@ -6,9 +6,9 @@
     margin-right: auto;
     text-align: left;
     height: 100vh;
-    /* animation-name: load; */
-    /* animation-duration: 1s; */
-    /* border: 1px solid; */
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid black; */
 }
 
 .home > h2 {
@@ -16,13 +16,109 @@
     color: #fff;
 }
 
-@keyframes load {
-    from { 
-        /* opacity: 0; */
-        transform: translateX(-100vw);
-    }
-    to {
-        /* opacity: 1; */
-        transform: translateX(0);
-    }
+.home_container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* grid-template-rows: auto; */
+    justify-content: center;
+    /* border: 1px solid black; */
+    /* padding: 30px; */
+    /* height: 100vh; */
+}
+
+.row, .col {
+    /* border: 1px solid black; */
+}
+
+.home_info {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    display: block;
+    place-self: center;
+    padding: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.home_info > h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.home_info > p {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.panel_instruction {
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.4)
+}
+
+.home_graphics {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: auto; */
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+
+.panel, .site_graphic {
+    grid-row: 1 / 2;
+}
+
+.panel {
+    /* position: relative; */
+    padding: 15px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+    z-index: 10;
+    background-color: rgba(234, 234, 234, 0.9);
+    border-radius: 32px;
+    place-self: center;
+    width: 240px;
+    height: 420px;
+    grid-column: 1 / 3;
+}
+
+.panel_graphic {
+    position: relative;
+    display: block;
+    /* padding: 5px; */
+    height: 100%;
+    background-color: white;
+    border-radius: 16px;
+}
+
+.panel_graphic_info {
+    height: 60%;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.site_graphic {
+    padding: 40px 40px 40px 80px;
+    grid-column: 2 / -1;
+    display: block;
+    /* align-items: center; */
+    /* justify-content: center; */
+    
+    background-color: rgba(255, 255, 255,0.4);
+    border-radius: 16px;
+}
+
+.site_graphic > img {
+    object-fit: contain;
+    /* place-self: center; */
+    /* align-self: center; */
+    /* background-size: contain; */
+    /* background-image: url(/src/assets/sort_graphic.png); */
+    max-width: 100%;
+    max-height: 100%;
+    /* opacity: 0.8; */
+    
 }
