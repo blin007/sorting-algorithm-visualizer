@@ -30,7 +30,7 @@ const HeaderSort = ({ headerVariants, setBarSize, setSpeed, sortingAlgo, play })
             animate={headerVariants?.visible}
             exit={headerVariants?.exit}
         >
-            <Link to="/sorting-algorithm-visualizer" className="header_link">
+            <Link to="/" className="header_link">
                 <motion.div 
                     className="header_nav_back"
                     whileHover={headerVariants.hover}

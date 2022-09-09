@@ -28,6 +28,6 @@ This project presents a visualization of several sorting algorithms including:
 
 ## Links
 
-[View Deploy Here]() 🚀
+[View Deploy Here](https://blin007.github.io/sorting-algorithm-visualizer/) 🚀
 
 
