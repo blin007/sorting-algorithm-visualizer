@@ -16,15 +16,14 @@ const Home = ({ homeVariants }) => {
     >
       <div className="home_container">
         <div className="row home_info">
-          <h2>LOREM IPSUM</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Consequat id porta nibh venenatis cras sed felis. Id nibh tortor id aliquet lectus proin nibh.
-          </p>
-          <div className="panel_instruction">
-            <p>To try, click on one of the sorting algorithms and press play</p>
-          </div>
+          <h2>Sorting Algorithm Visualizer</h2>
+          <p>Built using ReactJS </p>
+          <p>and</p>
+          <p>Framer Motion</p>
+          <p>(for route transitions)</p>
+          {/* <div className="panel_instruction">
+            
+          </div> */}
         </div>
         <div className="row home_graphics">
           <div className="col panel">
@@ -39,13 +38,10 @@ const Home = ({ homeVariants }) => {
                 <div></div>
               </div>
               <div className="panel_graphic_info">
-                <h2>Lorem Ipsum</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Consequat id porta nibh venenatis cras sed felis. Id nibh tortor id aliquet lectus proin nibh.
-                </p>
-
+                <h2>WELCOME</h2>
+                <p>Click on one of the </p>
+                <p>Sorting Algorithms</p>
+                <p>above to try now</p>
               </div>
             </div>
           </div>
