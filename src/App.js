@@ -22,13 +22,13 @@ function App() {
     
       <AnimatePresence mode='wait'>
           <Routes location={location} key={location.pathname}>
-            <Route path="/" element={[<Header headerVariants={headerVariants}/>, <Home homeVariants={homeVariants}/>]}/>
-            <Route path="/insertion" element={[<Insertion headerVariants={headerVariants} />]} />
-            <Route path="/heap" element={[<Heap headerVariants={headerVariants} />]} />
-            <Route path="/merge" element={[<Merge headerVariants={headerVariants} />]} />
-            <Route path="/quick" element={[<Quick headerVariants={headerVariants}/>]} />
-            <Route path="/bubble" element={[<Bubble headerVariants={headerVariants}/>]} />
-            <Route path="/selection" element={[<Selection headerVariants={headerVariants} />]} />
+            <Route path="/sorting-algorithm-visualizer" exact element={[<Header headerVariants={headerVariants}/>, <Home homeVariants={homeVariants}/>]}/>
+            <Route path="/sorting-algorithm-visualizer/insertion" exact element={[<Insertion headerVariants={headerVariants} />]} />
+            <Route path="/sorting-algorithm-visualizer/heap" exact element={[<Heap headerVariants={headerVariants} />]} />
+            <Route path="/sorting-algorithm-visualizer/merge" exact element={[<Merge headerVariants={headerVariants} />]} />
+            <Route path="/sorting-algorithm-visualizer/quick" exact element={[<Quick headerVariants={headerVariants}/>]} />
+            <Route path="/sorting-algorithm-visualizer/bubble" exact element={[<Bubble headerVariants={headerVariants}/>]} />
+            <Route path="/sorting-algorithm-visualizer/selection" exact element={[<Selection headerVariants={headerVariants} />]} />
           </Routes>
       </AnimatePresence>
   );

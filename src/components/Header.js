@@ -14,7 +14,7 @@ const Header = ({ headerVariants }) => {
             animate={headerVariants?.visible}
             exit={headerVariants?.exit}
         >
-            <Link to="/" className="header_link">
+            <Link to="/sorting-algorithm-visualizer" className="header_link">
                 <div className="header_title">
                     <motion.span 
                         className="header_titleName"
@@ -27,7 +27,7 @@ const Header = ({ headerVariants }) => {
             </Link>
 
             <div className="header_nav">
-                <Link to="/insertion" className="header_link">
+                <Link to="/sorting-algorithm-visualizer/insertion" className="header_link">
                     <div className="sort_option">
                         <motion.span 
                             className="sort_name"
@@ -38,7 +38,7 @@ const Header = ({ headerVariants }) => {
                         </motion.span>
                     </div>
                 </Link>
-                <Link to="/heap" className="header_link">
+                <Link to="/sorting-algorithm-visualizer/heap" className="header_link">
                     <div className="sort_option">
                         <motion.span 
                             className="sort_name"
@@ -49,7 +49,7 @@ const Header = ({ headerVariants }) => {
                         </motion.span>
                     </div>
                 </Link>
-                <Link to="/merge" className="header_link">
+                <Link to="/sorting-algorithm-visualizer/merge" className="header_link">
                     <div className="sort_option">
                         <motion.span 
                             className="sort_name"
@@ -60,7 +60,7 @@ const Header = ({ headerVariants }) => {
                         </motion.span>
                     </div>
                 </Link>
-                <Link to="/quick" className="header_link">
+                <Link to="/sorting-algorithm-visualizer/quick" className="header_link">
                     <div className="sort_option">
                         <motion.span 
                             className="sort_name"
@@ -71,7 +71,7 @@ const Header = ({ headerVariants }) => {
                         </motion.span>
                     </div>
                 </Link>
-                <Link to="/bubble" className="header_link">
+                <Link to="/sorting-algorithm-visualizer/bubble" className="header_link">
                     <div className="sort_option">
                         <motion.span 
                             className="sort_name"
@@ -82,7 +82,7 @@ const Header = ({ headerVariants }) => {
                         </motion.span>
                     </div>
                 </Link>
-                <Link to="/selection" className="header_link">
+                <Link to="/sorting-algorithm-visualizer/selection" className="header_link">
                     <div className="sort_option">
                         <motion.span 
                             className="sort_name"
