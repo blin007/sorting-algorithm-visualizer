@@ -7,12 +7,12 @@ const Home = ({ homeVariants }) => {
     <motion.div 
         className="home"
         variants={homeVariants}
-        initial={homeVariants.hidden}
-        animate={homeVariants.visible}
-        exit={homeVariants.exit}
+        initial={homeVariants?.hidden}
+        animate={homeVariants?.visible}
+        exit={homeVariants?.exit}
     >
 
-        <h2>WELCOME</h2>
+        <h2>LOREM IPSUM</h2>
     </motion.div>
   )
 }

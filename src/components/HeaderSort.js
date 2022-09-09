@@ -23,11 +23,16 @@ const HeaderSort = ({ headerVariants, setBarSize, setSpeed, sortingAlgo, play })
 
   return (
     <>
-        <div className="header">
+        <motion.div 
+            className="header" id="header"
+            variants={headerVariants}
+            initial={headerVariants?.hidden}
+            animate={headerVariants?.visible}
+            exit={headerVariants?.exit}
+        >
             <Link to="/" className="header_link">
                 <motion.div 
                     className="header_nav_back"
-                    variants={headerVariants}
                     whileHover={headerVariants.hover}
                     whileTap={headerVariants.tap}
                 >
@@ -40,7 +45,6 @@ const HeaderSort = ({ headerVariants, setBarSize, setSpeed, sortingAlgo, play })
             {disable && (
                 <motion.div 
                     className="sort_reload"
-                    variants={headerVariants}
                     whileHover={headerVariants.hover}
                     whileTap={headerVariants.tap}
                     onClick={handleReload}
@@ -97,7 +101,7 @@ const HeaderSort = ({ headerVariants, setBarSize, setSpeed, sortingAlgo, play })
                     </motion.button>
                 </div>
             </div>
-        </div>
+        </motion.div>
 
 
 

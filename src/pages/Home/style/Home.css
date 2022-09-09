@@ -1,15 +1,28 @@
 .home {
     max-width: 100vw;
     /* margin: 100px auto 40px;    */
-    padding: 20px;
+    padding: 30px 80px 30px 80px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    text-align: left;
     height: 100vh;
+    /* animation-name: load; */
+    /* animation-duration: 1s; */
     /* border: 1px solid; */
 }
 
 .home > h2 {
     font-size: 2em;
     color: #fff;
+}
+
+@keyframes load {
+    from { 
+        /* opacity: 0; */
+        transform: translateX(-100vw);
+    }
+    to {
+        /* opacity: 1; */
+        transform: translateX(0);
+    }
 }

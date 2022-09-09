@@ -5,14 +5,23 @@ import { Link } from 'react-router-dom'
 
 const Header = ({ headerVariants }) => {
 
+    const handleTransition = () => {
+        document.getElementById("header").className = 'header_exit'
+    }
+
   return (
     <>
-        <div className="header">
+        <motion.div 
+            className="header" id="header"
+            variants={headerVariants}
+            initial={headerVariants?.hidden}
+            animate={headerVariants?.visible}
+            exit={headerVariants?.exit}
+        >
             <Link to="/" className="header_link">
                 <div className="header_title">
                     <motion.span 
                         className="header_titleName"
-                        variants={headerVariants}
                         whileHover={headerVariants.hover}
                         whileTap={headerVariants.tap}
                     >
@@ -26,9 +35,9 @@ const Header = ({ headerVariants }) => {
                     <div className="sort_option">
                         <motion.span 
                             className="sort_name"
-                            variants={headerVariants}
                             whileHover={headerVariants.hover}
                             whileTap={headerVariants.tap}
+                            onClick={handleTransition}
                         >
                             Insertion Sort
                         </motion.span>
@@ -38,9 +47,9 @@ const Header = ({ headerVariants }) => {
                     <div className="sort_option">
                         <motion.span 
                             className="sort_name"
-                            variants={headerVariants}
                             whileHover={headerVariants.hover}
                             whileTap={headerVariants.tap}
+                            onClick={handleTransition}
                         >
                             Heap Sort
                         </motion.span>
@@ -50,9 +59,9 @@ const Header = ({ headerVariants }) => {
                     <div className="sort_option">
                         <motion.span 
                             className="sort_name"
-                            variants={headerVariants}
                             whileHover={headerVariants.hover}
                             whileTap={headerVariants.tap}
+                            onClick={handleTransition}
                         >
                             Merge Sort
                         </motion.span>
@@ -62,9 +71,9 @@ const Header = ({ headerVariants }) => {
                     <div className="sort_option">
                         <motion.span 
                             className="sort_name"
-                            variants={headerVariants}
                             whileHover={headerVariants.hover}
                             whileTap={headerVariants.tap}
+                            onClick={handleTransition}
                         >
                             Quick Sort
                         </motion.span>
@@ -74,9 +83,9 @@ const Header = ({ headerVariants }) => {
                     <div className="sort_option">
                         <motion.span 
                             className="sort_name"
-                            variants={headerVariants}
                             whileHover={headerVariants.hover}
                             whileTap={headerVariants.tap}
+                            onClick={handleTransition}
                         >
                             Bubble Sort
                         </motion.span>
@@ -86,16 +95,16 @@ const Header = ({ headerVariants }) => {
                     <div className="sort_option">
                         <motion.span 
                             className="sort_name"
-                            variants={headerVariants}
                             whileHover={headerVariants.hover}
                             whileTap={headerVariants.tap}
+                            onClick={handleTransition}
                         >
                             Selection Sort
                         </motion.span>
                     </div>
                 </Link>
             </div>
-        </div>
+        </motion.div>
     </>
 
   )

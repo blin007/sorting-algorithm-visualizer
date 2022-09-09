@@ -1,5 +1,5 @@
 import './styles/App.css';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {Routes, Route, useLocation} from 'react-router-dom';
 
 //import animations
 import headerVariants from './framer-motion/headerVariants';
@@ -14,22 +14,29 @@ import Bubble from './pages/Bubble';
 import Insertion from './pages/Insertion';
 import Selection from './pages/Selection';
 import Heap from './pages/Heap';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
+  const location = useLocation();
+
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={[<Header headerVariants={headerVariants}/>, <Home homeVariants={homeVariants}/>]}/>
-          <Route path="/insertion" element={[<Insertion headerVariants={headerVariants} />]} />
-          <Route path="/heap" element={[<Heap headerVariants={headerVariants} />]} />
-          <Route path="/merge" element={[<Merge headerVariants={headerVariants} />]} />
-          <Route path="/quick" element={[<Quick headerVariants={headerVariants}/>]} />
-          <Route path="/bubble" element={[<Bubble headerVariants={headerVariants}/>]} />
-          <Route path="/selection" element={[<Selection headerVariants={headerVariants} />]} />
-        </Routes>
-      </div>
-    </Router>
+    
+      <AnimatePresence mode='wait'>
+        {/* <div className="App"> */}
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={[<Header headerVariants={headerVariants}/>, <Home 
+              homeVariants={homeVariants}
+            />]}/>
+            <Route path="/insertion" element={[<Insertion headerVariants={headerVariants} />]} />
+            <Route path="/heap" element={[<Heap headerVariants={headerVariants} />]} />
+            <Route path="/merge" element={[<Merge headerVariants={headerVariants} />]} />
+            <Route path="/quick" element={[<Quick headerVariants={headerVariants}/>]} />
+            <Route path="/bubble" element={[<Bubble headerVariants={headerVariants}/>]} />
+            <Route path="/selection" element={[<Selection headerVariants={headerVariants} />]} />
+          </Routes>
+        {/* </div> */}
+      </AnimatePresence>
+    // </Router>
 
   );
 }
