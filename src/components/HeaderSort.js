@@ -55,22 +55,16 @@ const HeaderSort = ({ headerVariants, setBarSize, setSpeed, sortingAlgo, play })
 
             <div className="header_sort_nav">
                 <label htmlFor="speed" className="speed_label">Speed: </label>
-                {/* <div className="speed"> */}
-                    
-                    {/* Faster */}
-                    <input 
-                        id="speed"
-                        className="slider"
-                        type="range"
-                        min="15"
-                        max="150"
-                        step="5"
-                        onInput={e => handleInputSpeed(e)}
-                        disabled = {disable ? true : false}
-                    />
-                    {/* Slower */}
-                {/* </div> */}
-
+                <input 
+                    id="speed"
+                    className="slider"
+                    type="range"
+                    min="15"
+                    max="150"
+                    step="5"
+                    onInput={e => handleInputSpeed(e)}
+                    disabled = {disable ? true : false}
+                />
                 <label htmlFor="number">Number of Bars: </label>
                 <input 
                     id="number"

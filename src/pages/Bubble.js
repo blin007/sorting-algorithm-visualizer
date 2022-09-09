@@ -22,11 +22,11 @@ const Bubble = ({ headerVariants }) => {
     }, [barSize])
 
     const play = () => {
-        console.log("bars from before: ", bars)
+        // console.log("bars from before: ", bars)
         const barsArr = document.getElementsByClassName("bar")
         const visuals = bSort(bars, barSize)
-        console.log("bars after: ", bars)
-        console.log("visuals: ", visuals)
+        // console.log("bars after: ", bars)
+        // console.log("visuals: ", visuals)
 
         visuals.forEach((item, i) => {
             if(!item.colorBack){
@@ -38,8 +38,6 @@ const Bubble = ({ headerVariants }) => {
                 const rStyle = barsArr[rIndex].style
 
                 setTimeout(() => {
-                    // lStyle.backgroundColor = "#6eff7c"
-                    // rStyle.backgroundColor = "#6eff7c"
                     lStyle.background = "linear-gradient(#b44efc, #9808ff)"
                     rStyle.background = "linear-gradient(#b44efc, #9808ff)"
 
@@ -57,8 +55,6 @@ const Bubble = ({ headerVariants }) => {
                 const rStyle = barsArr[rIndex].style
 
                 setTimeout(() => {
-                    // lStyle.backgroundColor = "#cf76cd"
-                    // rStyle.backgroundColor = "#cf76cd"
                     lStyle.background = "linear-gradient(#5cfacb, #02f5ac)"
                     rStyle.background = "linear-gradient(#5cfacb, #02f5ac)"
                 }, i * speed )

@@ -7,7 +7,6 @@ const homeVariants = {
     opacity: 1,
     x: 0,
     transition: {
-      // delay: 1.5,
       duration: 1,
     }
   },

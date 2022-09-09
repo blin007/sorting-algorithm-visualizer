@@ -15,20 +15,6 @@
     width: 20%;
     border: 1px solid black;
     box-shadow: 0 0 6px black;
-    /* border: 1px solid red; */
     margin-left: 2px;
-    
-    /* animation-name: load_bar;
-    animation-duration: 0.8s; */
     z-index: -5;
-}
-
-@keyframes load_bar {
-    from {
-            transform: translateY(-100vh);
-        }
-    
-    to {
-        transform: translateY(0);
-    }
 }

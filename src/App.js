@@ -1,4 +1,3 @@
-import './styles/App.css';
 import {Routes, Route, useLocation} from 'react-router-dom';
 
 //import animations
@@ -22,11 +21,8 @@ function App() {
   return (
     
       <AnimatePresence mode='wait'>
-        {/* <div className="App"> */}
           <Routes location={location} key={location.pathname}>
-            <Route path="/" element={[<Header headerVariants={headerVariants}/>, <Home 
-              homeVariants={homeVariants}
-            />]}/>
+            <Route path="/" element={[<Header headerVariants={headerVariants}/>, <Home homeVariants={homeVariants}/>]}/>
             <Route path="/insertion" element={[<Insertion headerVariants={headerVariants} />]} />
             <Route path="/heap" element={[<Heap headerVariants={headerVariants} />]} />
             <Route path="/merge" element={[<Merge headerVariants={headerVariants} />]} />
@@ -34,10 +30,7 @@ function App() {
             <Route path="/bubble" element={[<Bubble headerVariants={headerVariants}/>]} />
             <Route path="/selection" element={[<Selection headerVariants={headerVariants} />]} />
           </Routes>
-        {/* </div> */}
       </AnimatePresence>
-    // </Router>
-
   );
 }
 

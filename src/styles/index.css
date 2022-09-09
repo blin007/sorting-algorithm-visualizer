@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  /* background: rgb(21, 21, 85); */
   /* background: radial-gradient(rgb(105, 132, 194), rgb(48, 48, 102)); */
   background-image: url(/src/assets/Page.svg);
   background-size: fill;

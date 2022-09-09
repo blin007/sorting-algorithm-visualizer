@@ -20,9 +20,8 @@ const Home = ({ homeVariants }) => {
           <p>Built using ReactJS </p>
           <p>and</p>
           <p>Framer Motion</p>
-          <p>(for route transitions)</p>
           {/* <div className="panel_instruction">
-            
+          
           </div> */}
         </div>
         <div className="row home_graphics">
@@ -46,7 +45,6 @@ const Home = ({ homeVariants }) => {
             </div>
           </div>
           <div className="col site_graphic" >
-            {/* src\pages\Home\Home.js */}
             <img src={sort_graphic} alt="graphic1" />
             <img src={sort_graphic2} alt="graphic2" />
           </div>

@@ -5,10 +5,6 @@ import { Link } from 'react-router-dom'
 
 const Header = ({ headerVariants }) => {
 
-    const handleTransition = () => {
-        document.getElementById("header").className = 'header_exit'
-    }
-
   return (
     <>
         <motion.div 
@@ -37,7 +33,6 @@ const Header = ({ headerVariants }) => {
                             className="sort_name"
                             whileHover={headerVariants.hover}
                             whileTap={headerVariants.tap}
-                            onClick={handleTransition}
                         >
                             Insertion Sort
                         </motion.span>
@@ -49,7 +44,6 @@ const Header = ({ headerVariants }) => {
                             className="sort_name"
                             whileHover={headerVariants.hover}
                             whileTap={headerVariants.tap}
-                            onClick={handleTransition}
                         >
                             Heap Sort
                         </motion.span>
@@ -61,7 +55,6 @@ const Header = ({ headerVariants }) => {
                             className="sort_name"
                             whileHover={headerVariants.hover}
                             whileTap={headerVariants.tap}
-                            onClick={handleTransition}
                         >
                             Merge Sort
                         </motion.span>
@@ -73,7 +66,6 @@ const Header = ({ headerVariants }) => {
                             className="sort_name"
                             whileHover={headerVariants.hover}
                             whileTap={headerVariants.tap}
-                            onClick={handleTransition}
                         >
                             Quick Sort
                         </motion.span>
@@ -85,7 +77,6 @@ const Header = ({ headerVariants }) => {
                             className="sort_name"
                             whileHover={headerVariants.hover}
                             whileTap={headerVariants.tap}
-                            onClick={handleTransition}
                         >
                             Bubble Sort
                         </motion.span>
@@ -97,7 +88,6 @@ const Header = ({ headerVariants }) => {
                             className="sort_name"
                             whileHover={headerVariants.hover}
                             whileTap={headerVariants.tap}
-                            onClick={handleTransition}
                         >
                             Selection Sort
                         </motion.span>

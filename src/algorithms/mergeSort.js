@@ -20,11 +20,6 @@ const mergeSort = (left, right, arr, temp, visualIndexArr) => {
     //get mid point
     const mid = Math.floor((left + right) / 2);
 
-
-    // console.log("left at beginning: ", left);
-    // console.log("mid at beginning: ", mid);
-    // console.log("right at beginning: ", right);
-
     //sort
     mergeSort(left, mid, temp, arr, visualIndexArr);
     mergeSort(mid+1, right, temp, arr, visualIndexArr);
@@ -37,15 +32,7 @@ const merge = (left, mid, right, arr, temp, visualIndexArr) => {
     let jndex = mid + 1;
     let counter = left;
     
-    // console.log("index at beginning: ", index);
-    // console.log("jndex at beginning: ", jndex);
-    // console.log("counter at beginning: ", counter);
     while(index <= mid && jndex <= right) {
-        // console.log("keeping track of indices******")
-        // console.log("index: ", index)
-        // console.log("jndex: ", jndex)
-        // console.log("counter: ", counter)
-
         //populate visual index array
         visualIndexArr.push([index, jndex])
 
@@ -54,7 +41,6 @@ const merge = (left, mid, right, arr, temp, visualIndexArr) => {
             arr[counter] = height;
             
             visualIndexArr.push([counter, height])
-            // console.log('pushed to temp: ', temp);
             index++;
         }
         else {
@@ -62,7 +48,6 @@ const merge = (left, mid, right, arr, temp, visualIndexArr) => {
             arr[counter] = temp[jndex];
 
             visualIndexArr.push([counter, height])
-            // console.log("pushed to temp: ", temp)
             jndex++;
         }
         counter++;
