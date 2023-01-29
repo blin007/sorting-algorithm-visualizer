@@ -13,7 +13,7 @@ This project presents a visualization of several sorting algorithms including:
 - Selection Sort
 - Merge Sort
 - Bubble Sort
-- Insertion Sort
+- Quick Sort
 - Heap Sort
 - Insertion Sort
 
